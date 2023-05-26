@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ICP域名备案查询工具</title>
+
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
+  </head>
+  <body>
+    <!-- 单选框，用于选择api平台 -->
+    <!-- 文本：提示选择api平台 -->
+    <p>请选择api平台：</p>
+    <div>
+      <input type="radio" name="api" value="beianx" checked /> ICP备案查询网
+      <!-- a链接 -->
+      <a href="https://my.beianx.cn/my_api" target="_blank">入口</a>
+    </div>
+    <div>
+      <input type="radio" name="api" value="5118" /> 5118
+      <!-- a链接 -->
+      <a href="https://www.5118.com/" target="_blank">入口</a>
+    </div>
+    <div>
+      <input type="radio" name="api" value="chinaz" /> 站长之家
+      <!-- a链接 -->
+      <a href="https://icp.chinaz.com/" target="_blank">入口</a>
+    </div>
+    <!-- 输入框，用于输入平台的接口key -->
+    <p>请输入平台对应的key：</p>
+    <input type="text" id="key" placeholder="api key" />
+    <!-- 换行 -->
+    <br /><br />
+    <div style="display: flex; flex-direction: row; height: 25px; width: 250px">
+      <!-- 输入框，默认值是当前标签页的主机域名 -->
+      <input type="text" id="domain" value="" placeholder="请输入域名" />
+      <!-- 查询按钮 -->
+      <button style="margin-left: 10px" id="query">查询</button>
+    </div>
+    <!-- 查询结果 -->
+    <div id="result">
+      <p>备案单位：<span id="unit"></span></p>
+      <p>类型： <span id="kind"></span></p>
+      <p>备案号：<span id="icp"></span></p>
+      <p>网站名称：<span id="siteName"></span></p>
+      <p>备案时间：<span id="passTime"></span></p>
+    </div>
+
+    <script src="./js/popup.js"></script>
+  </body>
+</html>
